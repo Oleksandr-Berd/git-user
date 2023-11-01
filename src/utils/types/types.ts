@@ -17,3 +17,7 @@ export type User = {
 export type BgImages = {
   bg: string
 }
+
+export type Submit = {
+submit:(query:string)=> void
+}

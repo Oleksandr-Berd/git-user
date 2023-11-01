@@ -23,14 +23,16 @@ useEffect(() => {
 getResult();
 },[])
 
-console.log(user);
-
+const submitSearch = (query:string):void => {
+  console.log(query);
+  
+}
 
   return (
     <ThemeProvider theme={darkTheme}>
       <SC.MainStyled>
-        <Header/>
-        <SearchForm/>
+        <Header />
+        <SearchForm submit={submitSearch} />
       </SC.MainStyled>
     </ThemeProvider>
   );

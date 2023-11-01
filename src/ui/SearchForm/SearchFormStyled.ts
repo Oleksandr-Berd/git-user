@@ -33,4 +33,8 @@ export const InputStyle = styled.input`
 
   border: none;
   border-radius: 15px;
+
+  &:focus{
+    outline: none;
+  }
 `;
