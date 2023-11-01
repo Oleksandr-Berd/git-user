@@ -9,12 +9,13 @@ import { darkTheme } from './utils/styles/darkTheme';
 
 import Header from './layouts/Header/Header';
 import SearchForm from './ui/SearchForm/SearchForm';
+import UserCard from './components/UserCard/UserCard';
 
 const App:React.FC = ()  => {
 const [user, setUser] = useState<User | null>(null)
 
-const getResult = async () => {
-  const result = await getUser();
+const getResult = async (query = "brynary") => {
+  const result = await getUser(query);
   setUser(result);
 };
 
@@ -24,15 +25,17 @@ getResult();
 },[])
 
 const submitSearch = (query:string):void => {
-  console.log(query);
-  
+  getResult(query);
 }
+
+
 
   return (
     <ThemeProvider theme={darkTheme}>
       <SC.MainStyled>
         <Header />
         <SearchForm submit={submitSearch} />
+        <UserCard userInfo={user}/>
       </SC.MainStyled>
     </ThemeProvider>
   );

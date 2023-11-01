@@ -4,9 +4,9 @@ const instance = axios.create({
   baseURL: "https://api.github.com",
 });
 
-export const getUser = async (userName: string = "brynary") => {
+export const getUser = async (query: string) => {
   try {
-    const response = await instance.get(`/users/${userName}`);
+    const response = await instance.get(`/users/${query}`);
 
     return response.data;
   } catch (error: any) {

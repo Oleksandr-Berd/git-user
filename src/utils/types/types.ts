@@ -2,16 +2,16 @@ export type User = {
   id: number;
   login: string;
   avatar_url: string;
-  location: string;
-  blog: string;
+  location: string | null;
+  blog: string | null;
   twitter_username: string | null;
-  public_repos: number;
-  followers: number;
-  following: number;
-  created_at: string;
-  company: string;
-  name: string;
-  bio: string;
+  public_repos: number | null;
+  followers: number | null;
+  following: number | null;
+  created_at: string | null;
+  company: string | null;
+  name: string | null;
+  bio: string | null;
 };
 
 export type BgImages = {
