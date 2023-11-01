@@ -14,4 +14,9 @@ export const AvatarWrapper = styled.div`
 
     border-radius: 50%;
   }
+
+  
+`
+export const Login = styled.h3`
+color: ${props => props.theme.colors.ui};
 `;

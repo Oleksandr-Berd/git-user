@@ -21,7 +21,7 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
         </SC.AvatarWrapper>
         <div>
           <h1>{name}</h1>
-          <h3>`@${login}` </h3>
+          <SC.Login>@{login}</SC.Login>
           <p>{created_at}</p>
         </div>
       </div>
