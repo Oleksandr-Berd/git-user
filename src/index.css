@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "SpaceMonoBold";
+  src: local("Space Mono"),
+    url("assets/fonts/Space_Mono/SpaceMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceMonoReg";
+  src: local("Space Mono"),
+    url("assets/fonts/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  margin: 0;
+}
+
+h1, h2{
+  font-family: "SpaceMonoBold";
+}
+
+h3, h4, p{
+  font-family: "SpaceMonoReg";
+}
+
+p{
+  margin: 0;
+ 
+}
+a {
+  text-decoration: none;
+  font-family: "ManropeMedium";
+}
