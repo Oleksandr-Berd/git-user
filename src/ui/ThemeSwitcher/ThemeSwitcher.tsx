@@ -1,10 +1,12 @@
+import * as SC from "./ThemeSwitcherStyled"
+
 import {ReactComponent as SunIcon} from "../../assets/images/sunIcon.svg"
 
 const ThemeSwitcher = () => {
-    return ( <div>
-        <h2>light</h2>
+    return ( <SC.Wrapper>
+        <SC.Name>light</SC.Name>
         <SunIcon/>
-    </div> );
+    </SC.Wrapper> );
 }
  
 export default ThemeSwitcher;

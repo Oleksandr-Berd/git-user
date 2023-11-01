@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from "@emotion/react";
 
+import * as SC from "./AppStyled"
+
 import { getUser } from './services/api';
 import { User } from './utils/types/types';
 import { darkTheme } from './utils/styles/darkTheme';
@@ -24,9 +26,9 @@ console.log(user);
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <main>
+      <SC.MainStyled>
         <Header/>
-      </main>
+      </SC.MainStyled>
     </ThemeProvider>
   );
 }

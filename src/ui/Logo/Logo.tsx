@@ -1,5 +1,7 @@
+import * as SC from "./LogoStyled"
+
 const Logo:React.FC = () => {
-    return <h1>devfinder</h1>;
+    return <SC.LogoStyled>devfinder</SC.LogoStyled>;
 }
  
 export default Logo;
