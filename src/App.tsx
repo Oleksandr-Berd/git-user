@@ -8,16 +8,18 @@ import { User } from './utils/types/types';
 import { darkTheme } from './utils/styles/darkTheme';
 
 import Header from './layouts/Header/Header';
+import SearchForm from './ui/SearchForm/SearchForm';
 
 const App:React.FC = ()  => {
 const [user, setUser] = useState<User | null>(null)
 
-useEffect(() => {
 const getResult = async () => {
   const result = await getUser();
   setUser(result);
-  
-}
+};
+
+useEffect(() => {
+
 getResult();
 },[])
 
@@ -28,6 +30,7 @@ console.log(user);
     <ThemeProvider theme={darkTheme}>
       <SC.MainStyled>
         <Header/>
+        <SearchForm/>
       </SC.MainStyled>
     </ThemeProvider>
   );

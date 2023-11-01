@@ -14,11 +14,6 @@ export type User = {
   bio: string;
 };
 
-// export type Theme = {
-//   color: {
-//     ui: string;
-//     text: string;
-//     body: string;
-//     component: string;
-//   };
-// };
+export type BgImages = {
+  bg: string
+}
