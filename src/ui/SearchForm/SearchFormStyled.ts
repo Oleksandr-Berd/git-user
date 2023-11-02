@@ -3,18 +3,25 @@ import { BgImages, StylesProps } from '../../utils/types/types';
 
 
 export const FormStyled = styled.form<BgImages>`
-position: relative;
+  position: relative;
 
-&::before{
-position: absolute;
-top: 0;
-left: 0;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-transform: translateY(20px) translateX(16px);
+    transform: translateY(20px) translateX(16px);
 
-    content: url(${props => props.bg});
-}
-`
+    content: url(${(props) => props.bg});
+
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 24px;
+
+      transform: translateY(23px) translateX(32px);
+    }
+  }
+`;
 
 export const InputStyle = styled.input`
   width: calc(100% - 45px);
@@ -41,8 +48,19 @@ export const InputStyle = styled.input`
     outline: none;
   }
 
-  &::placeholder{
-    color:${props => props.theme.colors.secondaryText}
+  &::placeholder {
+    color: ${(props) => props.theme.colors.secondaryText};
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% - 80px);
+
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 80px;
+
+    font-size: 18px;
+    line-height: 1.39;
   }
 `;
 

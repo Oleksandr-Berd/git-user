@@ -20,4 +20,12 @@ export const ButtonStyled = styled.button`
 
   border: none;
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    transform: translateX(-10px) translateY(10px);
+
+    font-size: 16px;
+    padding-left: 24px;
+    padding-right: 23px;
+  }
 `;
