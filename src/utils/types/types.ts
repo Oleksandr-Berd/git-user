@@ -8,7 +8,7 @@ export type User = {
   public_repos: number | null;
   followers: number | null;
   following: number | null;
-  created_at: string | null;
+  created_at: string;
   company: string | null;
   name: string | null;
   bio: string | null;
