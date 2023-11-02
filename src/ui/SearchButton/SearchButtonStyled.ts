@@ -28,4 +28,16 @@ export const ButtonStyled = styled.button`
     padding-left: 24px;
     padding-right: 23px;
   }
+
+  @media (min-width: 1440px) {
+    cursor: pointer;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #60abff;
+
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
 `;

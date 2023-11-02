@@ -25,6 +25,17 @@ export const UserCardStyled = styled.div`
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  @media (min-width: 1440px) {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 `;
 
 export const CardHeaderWrapper = styled.div`
