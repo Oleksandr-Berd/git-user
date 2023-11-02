@@ -13,4 +13,9 @@ padding-bottom: 25px;
     padding-top: 140px;
     padding-bottom: 35px;
 }
+
+@media (min-width: 1440px){
+    padding-top: 144px;
+    padding-bottom: 36px;
+}
 `

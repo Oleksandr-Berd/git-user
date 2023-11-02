@@ -1,15 +1,21 @@
 import styled from "@emotion/styled";
 
 export const MainStyled = styled.main`
-padding-left: 24px;
-padding-right: 24px;
-padding-bottom: 79px;
+  padding-bottom: 79px;
+  padding-left: 24px;
+  padding-right: 24px;
 
-background-color: ${props => props.theme.colors.body};
+  background-color: ${(props) => props.theme.colors.body};
 
-@media (min-width: 768px){
+  @media (min-width: 768px) {
+    padding-bottom: 236px;
     padding-left: 97px;
     padding-right: 98px;
-    padding-bottom: 236px;
-}
-`
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 145px;
+    padding-left: 355px;
+    padding-right: 155px;
+  }
+`;
