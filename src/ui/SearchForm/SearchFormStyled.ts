@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BgImages } from "../../utils/types/types";
+import { BgImages, StylesProps } from '../../utils/types/types';
 
 
 export const FormStyled = styled.form<BgImages>`
@@ -37,4 +37,13 @@ export const InputStyle = styled.input`
   &:focus{
     outline: none;
   }
+`;
+
+
+export const ErrorStyled = styled.p<StylesProps>`
+  
+
+  visibility: ${props => props.status === "available" ? "none" : "hidden"};
+
+  color: #f74646;
 `;

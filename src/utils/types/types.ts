@@ -19,5 +19,10 @@ export type BgImages = {
 }
 
 export type Submit = {
-submit:(query:string)=> void
+submit:(query:string)=> void;
+error: string | null;
+}
+
+export type StylesProps = {
+  status: "available" | "disable";
 }

@@ -2,6 +2,12 @@ import * as SC from "./UserCardStyled";
 
 import { User } from "../../utils/types/types";
 
+import {ReactComponent as Location} from "../../assets/images/location_icon.svg"
+import { ReactComponent as Blog } from "../../assets/images/blog_icon.svg";
+import { ReactComponent as Twitter } from "../../assets/images/twitter_icon.svg";
+import { ReactComponent as Company } from "../../assets/images/company_icon.svg";
+
+
 type Props = {
   userInfo: User | null;
 };
@@ -20,6 +26,10 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
     public_repos,
     followers,
     following,
+    location,
+    blog,
+    twitter_username,
+    company,
   } = userInfo;
 
   const date = new Date(created_at);
@@ -46,7 +56,9 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
       <SC.StatsList>
         <SC.StatsItem>
           <SC.StatsTitle>Repos</SC.StatsTitle>
-          <SC.StatsTitle>{public_repos ? public_repos : "No data"}</SC.StatsTitle>
+          <SC.StatsTitle>
+            {public_repos ? public_repos : "No data"}
+          </SC.StatsTitle>
         </SC.StatsItem>
         <SC.StatsItem>
           <SC.StatsTitle>Followers</SC.StatsTitle>
@@ -57,6 +69,28 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
           <SC.StatsTitle>{following ? following : "No data"}</SC.StatsTitle>
         </SC.StatsItem>
       </SC.StatsList>
+      <ul>
+        <SC.InfoItem status={location ? "available" : "disable"}>
+          <Location />
+          <SC.InfoContent>
+            {location ? location : "Not Available"}
+          </SC.InfoContent>
+        </SC.InfoItem>
+        <SC.InfoItem status={blog ? "available" : "disable"}>
+          <Blog />
+          <SC.InfoContent>{blog ? blog : "Not Available"}</SC.InfoContent>
+        </SC.InfoItem>
+        <SC.InfoItem status={twitter_username ? "available" : "disable"}>
+          <Twitter />
+          <SC.InfoContent>
+            {twitter_username ? twitter_username : "Not Available"}
+          </SC.InfoContent>
+        </SC.InfoItem>
+        <SC.InfoItem status={company ? "available" : "disable"}>
+          <Company />
+          <SC.InfoContent>{company ? company : "Not Available"}</SC.InfoContent>
+        </SC.InfoItem>
+      </ul>
     </SC.UserCardStyled>
   );
 };

@@ -8,7 +8,7 @@ import SearchButton from "../SearchButton/SearchButton";
 import magnifying from "../../assets/images/magnifying.svg";
 import { Submit } from "../../utils/types/types";
 
-const SearchForm: React.FC<Submit> = ({ submit }) => {
+const SearchForm: React.FC<Submit> = ({ submit, error }) => {
   const formik = useFormik({
     initialValues: {
       query: "",
@@ -38,6 +38,7 @@ const SearchForm: React.FC<Submit> = ({ submit }) => {
         onChange={handleChange}
       />
       <SearchButton />
+      <SC.ErrorStyled status={error ? "available" : "disable"}>No results</SC.ErrorStyled>
     </SC.FormStyled>
   );
 };

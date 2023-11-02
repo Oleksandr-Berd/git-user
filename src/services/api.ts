@@ -10,6 +10,6 @@ export const getUser = async (query: string) => {
 
     return response.data;
   } catch (error: any) {
-    return error.response;
+    return error.response.data.message;
   }
 };

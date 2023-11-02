@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { StylesProps } from "../../utils/types/types";
 
 export const UserCardStyled = styled.div`
   padding-top: 32px;
@@ -57,7 +58,7 @@ export const DateStyled = styled.p`
 `;
 
 export const Bio = styled.p`
-margin-bottom: 23px;
+  margin-bottom: 23px;
 
   color: ${(props) => props.theme.colors.text};
 
@@ -75,6 +76,8 @@ export const StatsList = styled.ul`
   padding-bottom: 19px;
   padding-left: 28px;
   padding-right: 28px;
+
+  margin-bottom: 24px;
 
   background-color: ${(props) => props.theme.colors.body};
 
@@ -97,9 +100,37 @@ export const StatsTitle = styled.p`
   font-size: 11px;
 `;
 
-
 export const StatsNumber = styled.h2`
   color: ${(props) => props.theme.colors.text};
 
   font-size: 16px;
+`;
+
+export const InfoItem = styled.li<StylesProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  & > p {
+    margin-left: 19px;
+
+    color: ${(props) =>
+      props.status === "available" ? props.theme.colors.text : "#697C9A"};
+
+    font-size: 13px;
+  }
+
+  & > svg {
+    fill: ${(props) =>
+      props.status === "available" ? props.theme.colors.text : "#697C9A"};
+  }
+`;
+
+export const InfoContent = styled.p`
+ 
 `;

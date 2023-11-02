@@ -13,9 +13,16 @@ import UserCard from './components/UserCard/UserCard';
 
 const App:React.FC = ()  => {
 const [user, setUser] = useState<User | null>(null)
+const [error, setError] = useState<string | null>(null)
 
 const getResult = async (query = "brynary") => {
   const result = await getUser(query);
+
+  if (typeof result === "string"){
+    setError(result);
+  }
+  
+  
   setUser(result);
 };
 
@@ -28,14 +35,15 @@ const submitSearch = (query:string):void => {
   getResult(query);
 }
 
+console.log(error);
 
 
   return (
     <ThemeProvider theme={darkTheme}>
       <SC.MainStyled>
         <Header />
-        <SearchForm submit={submitSearch} />
-        <UserCard userInfo={user}/>
+        <SearchForm submit={submitSearch} error={error ? error : null}/>
+        {!error ? <UserCard userInfo={user}/> : null}
       </SC.MainStyled>
     </ThemeProvider>
   );
