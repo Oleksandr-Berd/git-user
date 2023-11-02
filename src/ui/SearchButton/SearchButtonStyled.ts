@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 
 export const ButtonStyled = styled.button`
-position: absolute;
-top: 0;
-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-transform: translateX(-7px) translateY(7px);
+  transform: translateX(-7px) translateY(7px);
 
   padding-top: 13px;
   padding-bottom: 13px;
@@ -13,7 +13,7 @@ transform: translateX(-7px) translateY(7px);
   padding-right: 16px;
 
   background-color: ${(props) => props.theme.colors.ui};
-  color: ${(props) => props.theme.colors.text};
+  color: #fff;
 
   font-size: 14px;
   font-family: "SpaceMonoBold";

@@ -26,3 +26,8 @@ error: string | null;
 export type StylesProps = {
   status: "available" | "disable";
 }
+
+export type HeaderProps = {
+  toggleMode:()=>void;
+  mode:"dark" | "light";
+}

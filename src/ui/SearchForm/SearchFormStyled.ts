@@ -17,7 +17,6 @@ transform: translateY(20px) translateX(16px);
 `
 
 export const InputStyle = styled.input`
-
   width: calc(100% - 45px);
 
   padding-top: 18px;
@@ -25,7 +24,7 @@ export const InputStyle = styled.input`
   padding-left: 45px;
 
   background-color: ${(props) => props.theme.colors.component};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.secondaryText};
 
   font-size: 13px;
   line-height: 1.9;
@@ -34,8 +33,16 @@ export const InputStyle = styled.input`
   border: none;
   border-radius: 15px;
 
-  &:focus{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  &:focus {
     outline: none;
+  }
+
+  &::placeholder{
+    color:${props => props.theme.colors.secondaryText}
   }
 `;
 
