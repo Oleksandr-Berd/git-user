@@ -16,6 +16,15 @@ export const UserCardStyled = styled.div`
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  @media (min-width: 768px) {
+    margin-top: 24px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 `;
 
 export const CardHeaderWrapper = styled.div`
@@ -25,6 +34,12 @@ export const CardHeaderWrapper = styled.div`
   justify-content: flex-start;
 
   margin-bottom: 33px;
+
+  @media (min-width: 768px) {
+    align-items: center;
+
+    margin-bottom: 24px;
+  }
 `;
 
 export const AvatarWrapper = styled.div`
@@ -39,12 +54,25 @@ export const AvatarWrapper = styled.div`
 
     border-radius: 50%;
   }
+
+  @media (min-width: 768px) {
+    width: 117px;
+    height: 117px;
+
+    margin-right: 41px;
+  }
 `;
 
 export const Name = styled.h1`
   font-size: 16px;
 
   color: ${(props) => props.theme.colors.text};
+
+  @media (min-width: 768px) {
+    margin-bottom: 2px;
+
+    font-size: 26px;
+  }
 `;
 
 export const Login = styled.h3`
@@ -53,12 +81,22 @@ export const Login = styled.h3`
   color: ${(props) => props.theme.colors.ui};
 
   font-size: 13px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 4px;
+
+    font-size: 16px;
+  }
 `;
 
 export const DateStyled = styled.p`
   color: ${(props) => props.theme.colors.text};
 
   font-size: 13px;
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 export const Bio = styled.p`
@@ -68,6 +106,13 @@ export const Bio = styled.p`
 
   font-size: 13px;
   line-height: 1.9;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+
+    font-size: 15px;
+    line-height: 1.67;
+  }
 `;
 
 export const StatsList = styled.ul`
@@ -86,6 +131,17 @@ export const StatsList = styled.ul`
   background-color: ${(props) => props.theme.colors.body};
 
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-left: 32px;
+    padding-right: 96px;
+
+    margin-bottom: 30px;
+  }
 `;
 
 export const StatsItem = styled.li`
@@ -93,6 +149,12 @@ export const StatsItem = styled.li`
 
   &:not(:last-child) {
     margin-right: 1px;
+
+    @media (min-width: 768px) {
+      margin-right: 99px;
+
+      text-align: left;
+    }
   }
 `;
 
@@ -102,12 +164,29 @@ export const StatsTitle = styled.p`
   color: ${(props) => props.theme.colors.text};
 
   font-size: 11px;
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 export const StatsNumber = styled.h2`
   color: ${(props) => props.theme.colors.text};
 
   font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+`;
+
+export const InfoList = styled.ul`
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 65px;
+    row-gap: 19px;
+  }
 `;
 
 export const InfoItem = styled.li<StylesProps>`
@@ -118,6 +197,10 @@ export const InfoItem = styled.li<StylesProps>`
 
   &:not(:last-child) {
     margin-bottom: 16px;
+
+    @media (min-width: 768px){
+        margin-bottom: 0;
+    }
   }
 
   & > p {
@@ -127,6 +210,10 @@ export const InfoItem = styled.li<StylesProps>`
       props.status === "available" ? props.theme.colors.text : "#697C9A"};
 
     font-size: 13px;
+
+    @media (min-width: 768px){
+        font-size: 15px;
+    }
   }
 
   & > svg {
@@ -135,6 +222,4 @@ export const InfoItem = styled.li<StylesProps>`
   }
 `;
 
-export const InfoContent = styled.p`
- 
-`;
+export const InfoContent = styled.p``;

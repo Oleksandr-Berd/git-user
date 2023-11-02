@@ -56,20 +56,20 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
       <SC.StatsList>
         <SC.StatsItem>
           <SC.StatsTitle>Repos</SC.StatsTitle>
-          <SC.StatsTitle>
+          <SC.StatsNumber>
             {public_repos ? public_repos : "No data"}
-          </SC.StatsTitle>
+          </SC.StatsNumber>
         </SC.StatsItem>
         <SC.StatsItem>
           <SC.StatsTitle>Followers</SC.StatsTitle>
-          <SC.StatsTitle>{followers ? followers : "No data"}</SC.StatsTitle>
+          <SC.StatsNumber>{followers ? followers : "No data"}</SC.StatsNumber>
         </SC.StatsItem>
         <SC.StatsItem>
           <SC.StatsTitle>Following</SC.StatsTitle>
-          <SC.StatsTitle>{following ? following : "No data"}</SC.StatsTitle>
+          <SC.StatsNumber>{following ? following : "No data"}</SC.StatsNumber>
         </SC.StatsItem>
       </SC.StatsList>
-      <ul>
+      <SC.InfoList>
         <SC.InfoItem status={location ? "available" : "disable"}>
           <Location />
           <SC.InfoContent>
@@ -90,7 +90,7 @@ const UserCard: React.FC<Props> = ({ userInfo }) => {
           <Company />
           <SC.InfoContent>{company ? company : "Not Available"}</SC.InfoContent>
         </SC.InfoItem>
-      </ul>
+      </SC.InfoList>
     </SC.UserCardStyled>
   );
 };
