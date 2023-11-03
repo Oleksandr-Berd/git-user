@@ -51,6 +51,13 @@ export const CardHeaderWrapper = styled.div`
 
     margin-bottom: 24px;
   }
+
+  @media (min-width: 1440px){
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+  }
 `;
 
 export const AvatarWrapper = styled.div`
@@ -71,6 +78,10 @@ export const AvatarWrapper = styled.div`
     height: 117px;
 
     margin-right: 41px;
+  }
+
+  @media (min-width: 1440px){
+    margin-right: 37px;
   }
 `;
 
@@ -152,6 +163,10 @@ export const StatsList = styled.ul`
     padding-right: 96px;
 
     margin-bottom: 30px;
+  }
+
+  @media (min-width: 1440px){
+    padding-right: 83px;
   }
 `;
 
