@@ -27,9 +27,9 @@ export const UserCardStyled = styled.div`
   }
 
   @media (min-width: 1440px) {
-display: flex;
-flex-direction: row;
-align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 
     padding-top: 48px;
     padding-bottom: 48px;
@@ -209,8 +209,8 @@ export const InfoItem = styled.li<StylesProps>`
   &:not(:last-child) {
     margin-bottom: 16px;
 
-    @media (min-width: 768px){
-        margin-bottom: 0;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
     }
   }
 
@@ -222,8 +222,8 @@ export const InfoItem = styled.li<StylesProps>`
 
     font-size: 13px;
 
-    @media (min-width: 768px){
-        font-size: 15px;
+    @media (min-width: 768px) {
+      font-size: 15px;
     }
   }
 

@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import { BgImages, StylesProps } from '../../utils/types/types';
-
+import { BgImages, StylesProps } from "../../utils/types/types";
 
 export const FormStyled = styled.form<BgImages>`
   position: relative;
@@ -64,11 +63,18 @@ export const InputStyle = styled.input`
   }
 `;
 
-
 export const ErrorStyled = styled.p<StylesProps>`
-  
-
-  visibility: ${props => props.status === "available" ? "none" : "hidden"};
+  visibility: ${(props) => (props.status === "available" ? "none" : "hidden")};
 
   color: #f74646;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translateX(-140px) translateY(24px); 
+
+    font-size: 15px;
+  }
 `;
